@@ -1,63 +1,26 @@
-# Portfolio Muhammad Fajri
+# Muhammad Fajri — Portfolio Website
 
-Portfolio pribadi berbasis HTML, CSS, dan JavaScript.
+Website portfolio pribadi yang saya bangun menggunakan HTML, CSS, dan JavaScript untuk menampilkan profil, project, dan skill yang saya miliki.
 
-## Struktur file
+## 🎯 Tujuan Project
+Project ini dibuat sebagai representasi digital dari kemampuan saya di bidang web development, khususnya dalam membangun tampilan yang clean, responsive, dan interaktif tanpa framework.
 
-- `index.html`: struktur halaman utama
-- `style.css`: tampilan dan layout
-- `script.js`: data portfolio dan render konten
-- `Profile.jpeg`: foto profil
-- `run-portfolio.ps1`: script untuk menjalankan server lokal sederhana
+## 🛠️ Tech Stack
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
-## Menjalankan project
+## ✨ Fitur
+- Tampilan responsive (desktop & mobile)
+- Struktur modular (HTML, CSS, JS terpisah)
+- Dynamic rendering menggunakan JavaScript
+- Desain minimalis & clean
 
-Buka langsung `index.html` di browser, atau jalankan:
+## 🚀 Demo
+(isi nanti kalau sudah deploy, misal GitHub Pages)
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\run-portfolio.ps1
-```
+## 📸 Preview
+(opsional: tambahkan screenshot nanti)
 
-Lalu buka `http://127.0.0.1:4173`.
-
-## Git dasar
-
-Inisialisasi repo lokal:
-
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "Initial portfolio site"
-```
-
-Hubungkan ke GitHub:
-
-```bash
-git remote add origin <URL-REPOSITORY-ANDA>
-git push -u origin main
-```
-
-Update berikutnya:
-
-```bash
-git add .
-git commit -m "Update portfolio"
-git push
-```
-
-Ambil update dari remote:
-
-```bash
-git pull
-```
-
-## Hosting yang cocok
-
-Project ini cocok untuk:
-
-- GitHub Pages
-- Netlify
-- Vercel
-
-Karena project ini statis, proses hosting-nya akan sangat sederhana.
+## 📌 Catatan
+Project ini masih akan terus saya kembangkan seiring peningkatan skill saya di bidang frontend development.
