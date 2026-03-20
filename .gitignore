@@ -1,0 +1,15 @@
+# File sistem operasi Windows
+Thumbs.db
+Desktop.ini
+
+# Folder editor
+.vscode/
+.idea/
+
+# Log atau file sementara
+*.log
+*.tmp
+*.temp
+
+# Cache umum
+.cache/
