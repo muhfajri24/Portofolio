@@ -25,7 +25,7 @@ const portfolioData = {
     Nilai ini bisa Anda ubah kapan saja tanpa menyentuh struktur HTML.
   */
   stats: [
-    { value: "3+", label: "Project publik di GitHub" },
+    { value: "4+", label: "Project publik di GitHub" },
     { value: "4+", label: "Peran organisasi & profesional" },
     { value: "2024-", label: "Perjalanan aktif membangun skill" },
   ],
@@ -148,24 +148,61 @@ const portfolioData = {
   */
   projects: [
     {
+      name: "Sistem Order di Tempat QR System",
+      stack: "HTML, CSS, JavaScript",
+      description:
+        "Sistem order di tempat berbasis QR yang memudahkan pelanggan membuka menu dan mengecek alur pemesanan langsung dari smartphone.",
+      liveUrl: "muhfajri24.github.io/Sistem-Order-di-Tempat-QR-System-/",
+      links: [
+        {
+          label: "Buka Website",
+          href: "https://muhfajri24.github.io/Sistem-Order-di-Tempat-QR-System-/",
+        },
+        {
+          label: "Buka Repository",
+          href: "https://github.com/muhfajri24/Sistem-Order-di-Tempat-QR-System-",
+        },
+      ],
+    },
+    {
       name: "revou-mini-project",
       stack: "CSS",
       description: "Mini project dari RevoU Coding Camp Software Engineering.",
-      link: "https://github.com/muhfajri24/revou-mini-project",
+      liveUrl: "muhfajri24.github.io/revou-mini-project/",
+      links: [
+        {
+          label: "Buka Website",
+          href: "https://muhfajri24.github.io/revou-mini-project/",
+        },
+        {
+          label: "Buka Repository",
+          href: "https://github.com/muhfajri24/revou-mini-project",
+        },
+      ],
     },
     {
       name: "Artficial_Intellegence_Project",
       stack: "Jupyter Notebook",
       description:
         "Proyek machine learning end-to-end untuk klasifikasi potabilitas air menggunakan KNN dan seleksi fitur berbasis Genetic Algorithm.",
-      link: "https://github.com/muhfajri24/Artficial_Intellegence_Project",
+      links: [
+        {
+          label: "Buka Repository",
+          href: "https://github.com/muhfajri24/Artficial_Intellegence_Project",
+        },
+      ],
     },
     {
       name: "employee-bonus-fuzzy-system",
       stack: "Jupyter Notebook",
       description:
         "Implementasi Fuzzy Inference System (Sugeno dan Mamdani) untuk menentukan bonus karyawan berdasarkan gaji dan skor performa.",
-      link: "https://github.com/muhfajri24/employee-bonus-fuzzy-system",
+      links: [
+        {
+          label: "Buka Repository",
+          href: "https://github.com/muhfajri24/employee-bonus-fuzzy-system",
+        },
+      ],
     },
   ],
 
@@ -348,14 +385,28 @@ function renderProjects() {
     const meta = createElement("p", "project-meta", project.stack);
     const title = createElement("h3", "", project.name);
     const description = createElement("p", "", project.description);
-    const link = createElement("a", "project-link", "Buka Repository");
+    const liveUrl = project.liveUrl
+      ? createElement("p", "project-live-url", `Link project: ${project.liveUrl}`)
+      : null;
+    const actions = createElement("div", "project-actions");
 
-    link.href = project.link;
-    link.target = "_blank";
-    link.rel = "noreferrer";
+    project.links.forEach((item) => {
+      const link = createElement("a", "project-link", item.label);
+
+      link.href = item.href;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+
+      actions.appendChild(link);
+    });
 
     top.append(meta, title, description);
-    card.append(top, link);
+
+    if (liveUrl) {
+      top.appendChild(liveUrl);
+    }
+
+    card.append(top, actions);
     projectList.appendChild(card);
   });
 }

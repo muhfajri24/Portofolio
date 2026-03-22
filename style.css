@@ -152,6 +152,12 @@ main {
   line-height: 1.8;
 }
 
+.section-description {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
 .hero-actions,
 .contact-actions {
   display: flex;
@@ -409,9 +415,45 @@ main {
   gap: 0.7rem;
 }
 
+.project-live-url {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(102, 227, 196, 0.2);
+  background: rgba(102, 227, 196, 0.08);
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 200, 87, 0.22);
+  background: rgba(255, 200, 87, 0.08);
   color: var(--accent-strong);
   font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 200, 87, 0.14);
+  border-color: rgba(255, 200, 87, 0.4);
 }
 
 .contact-card {
@@ -463,12 +505,42 @@ main {
 /* Responsive mobile */
 @media (max-width: 640px) {
   .site-header {
-    border-radius: 24px;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    border-radius: 22px;
+    padding: 1rem 1rem 1.1rem;
+  }
+
+  .brand {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.92rem;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
   }
 
   .site-nav {
-    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem;
+  }
+
+  .site-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.84rem;
+    line-height: 1;
+    white-space: nowrap;
   }
 
   .hero {
