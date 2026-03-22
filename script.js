@@ -152,11 +152,11 @@ const portfolioData = {
       stack: "HTML, CSS, JavaScript",
       description:
         "Sistem order di tempat berbasis QR yang memudahkan pelanggan membuka menu dan mengecek alur pemesanan langsung dari smartphone.",
-      liveUrl: "muhfajri24.github.io/Sistem-Order-di-Tempat-QR-System-/",
+      liveUrl: "https://raw.githack.com/muhfajri24/Sistem-Order-di-Tempat-QR-System-/main/index.html",
       links: [
         {
           label: "Buka Website",
-          href: "https://muhfajri24.github.io/Sistem-Order-di-Tempat-QR-System-/",
+          href: "https://raw.githack.com/muhfajri24/Sistem-Order-di-Tempat-QR-System-/main/index.html",
         },
         {
           label: "Buka Repository",
