@@ -50,19 +50,5 @@ Project ini dibuat sebagai langkah awal untuk:
 
 Clone repository dan jalankan secara lokal sesuai kebutuhan development.
 
----
-
-## 🔄 Future Improvements
-
-- Peningkatan UI/UX
-- Penambahan project baru
-- Integrasi backend & API
-- Migrasi ke framework modern (React / Next.js)
-
----
-
-## 📌 Closing
-
-Saya terbuka untuk peluang sebagai **Frontend Developer / Web Developer**, dan siap berkembang serta berkontribusi dalam tim profesional.
 
 Feel free to explore the live demo and review my code.
