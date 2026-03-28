@@ -2,16 +2,20 @@
 
 Website portfolio pribadi yang dirancang untuk menampilkan kemampuan saya dalam membangun antarmuka web yang **clean, responsive, dan user-friendly**.
 
-Project ini bukan hanya sekadar tampilan, tetapi juga mencerminkan bagaimana saya **menyusun struktur kode yang rapi, scalable, dan mudah dikembangkan** ke depannya.
+🔗 **Live Demo:**  
+https://muhfajri24.github.io/Portofolio/
+
+Project ini merepresentasikan bagaimana saya membangun website dari nol dengan struktur yang rapi, scalable, dan siap dikembangkan ke tahap yang lebih kompleks.
 
 ---
 
-## 🚀 Highlight Utama
+## 🚀 Highlight
 
-- Desain modern dan responsive (desktop & mobile)
-- Struktur kode sederhana, cocok untuk kolaborasi & scaling
-- Menggunakan **Vanilla JavaScript** untuk dynamic rendering (tanpa framework)
-- Siap deploy dengan **GitHub Pages (CI/CD via GitHub Actions)**
+- Responsive design (desktop & mobile)
+- Clean UI dengan fokus pada user experience
+- Structured & maintainable code
+- Dynamic rendering menggunakan Vanilla JavaScript
+- Automated deployment dengan GitHub Actions
 
 ---
 
@@ -25,23 +29,40 @@ Project ini bukan hanya sekadar tampilan, tetapi juga mencerminkan bagaimana say
 
 ## 🎯 Tujuan Project
 
-Website ini dibuat sebagai representasi nyata dari:
+Project ini dibuat sebagai langkah awal untuk:
 
-- Kemampuan dasar hingga menengah dalam **frontend development**
-- Pemahaman tentang **best practice struktur project web**
-- Kesiapan untuk berkembang ke teknologi yang lebih kompleks (React, backend, dll)
-
----
-
-## 📂 Fitur Utama
-
-- Landing page profil pribadi
-- Section project & skill
-- Tampilan responsive di berbagai device
-- Dynamic content rendering dengan JavaScript
+- Mengasah kemampuan **frontend development**
+- Memahami struktur project web yang baik
+- Membangun fondasi sebelum menggunakan framework modern seperti React
 
 ---
 
-## ▶️ Menjalankan Secara Lokal
+## 📂 Fitur
 
-Cukup buka file berikut di browser:
+- Halaman profil personal
+- Showcase project & skill
+- Responsive layout di berbagai device
+- Dynamic content rendering
+
+---
+
+## 💻 Development
+
+Clone repository dan jalankan secara lokal sesuai kebutuhan development.
+
+---
+
+## 🔄 Future Improvements
+
+- Peningkatan UI/UX
+- Penambahan project baru
+- Integrasi backend & API
+- Migrasi ke framework modern (React / Next.js)
+
+---
+
+## 📌 Closing
+
+Saya terbuka untuk peluang sebagai **Frontend Developer / Web Developer**, dan siap berkembang serta berkontribusi dalam tim profesional.
+
+Feel free to explore the live demo and review my code.
