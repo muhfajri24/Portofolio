@@ -207,7 +207,7 @@ const portfolioData = {
       },
       {
         period: "Apr 2025 - Mar 2026",
-        role: "Staff Ahli Komisi Etika",
+        role: "Staff Ahli Komisi Etik",
         company: "BPM HIMAIF - Universitas Telkom",
         description: "Mendukung pemantauan dan evaluasi kode etik organisasi serta keputusan internal.",
         highlights: [
