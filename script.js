@@ -117,25 +117,25 @@ const portfolioData = {
       en: "I am accustomed to analytical thinking, working on case-study-based projects, and staying open to continuous learning and adaptation in professional environments. Beyond technical work, I am also active in campus organizations, so I am used to leading, coordinating, and making decisions collaboratively.",
     },
     currentLabel: {
-      id: "Peran Saat Ini",
-      en: "Current Role",
+      id: "Pengalaman Utama",
+      en: "Featured Experience",
     },
     currentTitle: {
-      id: "Backend Developer",
-      en: "Backend Developer",
+      id: "Backend Developer Intern",
+      en: "Backend Developer Intern",
     },
     currentSubtitle: {
-      id: "Telkom Indonesia | Mahasiswa Informatika Universitas Telkom",
-      en: "Telkom Indonesia | Informatics Student at Telkom University",
+      id: "Telkom Indonesia | Januari 2026 - Mei 2026",
+      en: "Telkom Indonesia | January 2026 - May 2026",
     },
     highlights: {
       id: [
-        "Backend Developer di Telkom Indonesia sejak Januari 2026.",
+        "Magang Backend Developer di Telkom Indonesia pada Januari 2026 - Mei 2026.",
         "Ketua BPM HIMAIF Universitas Telkom sejak Maret 2026.",
         "Ketua UKM Paskibra Universitas Telkom sepanjang 2025.",
       ],
       en: [
-        "Backend Developer at Telkom Indonesia since January 2026.",
+        "Backend Developer Intern at Telkom Indonesia from January 2026 to May 2026.",
         "Chair of BPM HIMAIF Telkom University since March 2026.",
         "President of UKM Paskibra Telkom University throughout 2025.",
       ],
@@ -195,12 +195,12 @@ const portfolioData = {
         ],
       },
       {
-        period: "Jan 2026 - Sekarang",
-        role: "Back End Developer",
+        period: "Jan 2026 - Mei 2026",
+        role: "Magang Backend Developer",
         company: "Telkom Indonesia",
-        description: "Mengembangkan dan mengintegrasikan layanan backend untuk sistem chatbot pemantauan perangkat.",
+        description: "Berkontribusi pada pengembangan dan integrasi layanan backend untuk sistem chatbot pemantauan perangkat selama masa magang.",
         highlights: [
-          "Bertanggung jawab pada pembuatan API.",
+          "Berkontribusi pada pembuatan API.",
           "Mengelola data status perangkat seperti Aktif, Nonaktif, dan Tidak Terdeteksi.",
           "Berkolaborasi dengan tim frontend untuk widget obrolan dan dashboard monitoring.",
         ],
@@ -259,12 +259,12 @@ const portfolioData = {
         ],
       },
       {
-        period: "Jan 2026 - Present",
-        role: "Back End Developer",
+        period: "Jan 2026 - May 2026",
+        role: "Backend Developer Intern",
         company: "Telkom Indonesia",
-        description: "Developing and integrating backend services for a device monitoring chatbot system.",
+        description: "Contributed to the development and integration of backend services for a device monitoring chatbot system during the internship.",
         highlights: [
-          "Responsible for building APIs.",
+          "Contributed to building APIs.",
           "Manages device status data such as Up, Down, and Undetected.",
           "Collaborates with the frontend team on chat widgets and monitoring dashboards.",
         ],
