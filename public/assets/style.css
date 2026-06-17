@@ -321,6 +321,11 @@ main,
   line-height: 1.9;
 }
 
+#about-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .hero-highlights {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
