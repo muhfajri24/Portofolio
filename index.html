@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhammad Fajri | Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=20260519-1" />
+    <meta
+      name="description"
+      content="Portfolio Muhammad Fajri dengan tampilan elegan, interaktif, dan siap di-deploy gratis lewat GitHub Pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20260617-2" />
   </head>
   <body>
     <div class="page-glow" aria-hidden="true"></div>
@@ -34,7 +44,7 @@
           >
             <span class="language-trigger-flag" id="language-current-flag">ID</span>
             <span class="language-trigger-label" id="language-current-label">Bahasa Indonesia</span>
-            <span class="language-trigger-caret">v</span>
+            <span class="language-trigger-caret">&#9662;</span>
           </button>
 
           <div class="language-menu" id="language-menu" role="menu" hidden>
@@ -82,7 +92,7 @@
             </div>
 
             <div class="profile-card-body">
-              <p class="profile-label" id="profile-label">Saat ini</p>
+              <p class="profile-label" id="profile-label">Sorotan Peran</p>
               <h2 id="profile-title"></h2>
               <p id="profile-subtitle"></p>
               <div class="badge-list" id="focus-badges"></div>
@@ -149,6 +159,11 @@
           <p class="section-description" id="projects-description"></p>
         </div>
 
+        <div class="project-toolbar" data-reveal>
+          <p class="project-filter-label" id="project-filter-label"></p>
+          <div class="project-filters" id="project-filters"></div>
+        </div>
+
         <div class="project-grid" id="project-list"></div>
       </section>
 
@@ -169,6 +184,6 @@
       <p id="footer-text"></p>
     </footer>
 
-    <script src="script.js?v=20260519-1"></script>
+    <script src="script.js?v=20260617-2"></script>
   </body>
 </html>
