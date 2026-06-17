@@ -36,9 +36,9 @@ const portfolioData = {
         "Saya terbuka untuk backend development, web development, dan project berbasis data yang membutuhkan eksekusi teknis sekaligus komunikasi yang rapi.",
       infoTitle: "Info Singkat",
       noteLabel: "Fokus Saat Ini",
-      noteTitle: "Backend, web, dan data products",
+      noteTitle: "Data scientist dan backend",
       noteText:
-        "Saya menikmati proses mengubah masalah bisnis menjadi aplikasi, automasi, atau insight yang bisa digunakan.",
+        "Saya ingin bertumbuh ke arah data scientist dan backend developer melalui project yang analitis dan implementatif.",
       githubButton: "Lihat GitHub",
       linkedinButton: "LinkedIn",
       footer:
@@ -92,9 +92,9 @@ const portfolioData = {
         "I am open to backend development, web development, and data-oriented projects that need both technical execution and clear communication.",
       infoTitle: "Quick Info",
       noteLabel: "Current Focus",
-      noteTitle: "Backend, web, and data products",
+      noteTitle: "Data scientist and backend",
       noteText:
-        "I enjoy turning business problems into applications, automations, or insights that people can actually use.",
+        "I want to grow toward data scientist and backend developer roles through analytical and implementation-focused projects.",
       githubButton: "View GitHub",
       linkedinButton: "LinkedIn",
       footer:
@@ -146,19 +146,19 @@ const portfolioData = {
     },
     highlights: {
       id: [
-        "Portfolio kini disusun ulang dengan tampilan elegan dan interaksi yang lebih halus.",
-        "Project machine learning, analytics, dan NLP ditambahkan agar cerita portfolio lebih kuat.",
-        "Aktif memimpin organisasi sambil menjaga pertumbuhan teknis lewat project nyata.",
+        "Magang Backend Developer di Telkom Indonesia pada Januari 2026 - Mei 2026.",
+        "Ketua BPM HIMAIF Universitas Telkom sejak Maret 2026.",
+        "Ketua UKM Paskibra Universitas Telkom sepanjang 2025.",
       ],
       en: [
-        "The portfolio is now redesigned with a more elegant look and smoother interactions.",
-        "Machine learning, analytics, and NLP projects are added to strengthen the portfolio story.",
-        "Actively leads organizations while sustaining technical growth through real projects.",
+        "Backend Developer Intern at Telkom Indonesia from January 2026 to May 2026.",
+        "Chair of BPM HIMAIF Telkom University since March 2026.",
+        "President of UKM Paskibra Telkom University throughout 2025.",
       ],
     },
     focus: {
-      id: ["Backend Development", "Web Engineering", "Machine Learning", "Data Storytelling"],
-      en: ["Backend Development", "Web Engineering", "Machine Learning", "Data Storytelling"],
+      id: ["Data Scientist", "Backend Development"],
+      en: ["Data Scientist", "Backend Development"],
     },
   },
   quickInfo: {
