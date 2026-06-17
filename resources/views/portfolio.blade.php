@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Muhammad Fajri | Portfolio</title>
+        <meta
+            name="description"
+            content="Portfolio Muhammad Fajri yang dibangun dengan Laravel, menampilkan pengalaman, perjalanan akademik, dan project web serta data yang interaktif."
+        >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
+    </head>
+    <body>
+        <div class="page-glow" aria-hidden="true"></div>
+        <div class="page-grid" aria-hidden="true"></div>
+        <div class="page-noise" aria-hidden="true"></div>
+
+        <header class="site-header">
+            <div class="header-shell">
+                <a class="brand" href="#home">Muhammad Fajri</a>
+
+                <nav class="site-nav" aria-label="Navigasi utama">
+                    <a href="#about" id="nav-about">Tentang</a>
+                    <a href="#skills" id="nav-skills">Skill</a>
+                    <a href="#experience" id="nav-experience">Pengalaman</a>
+                    <a href="#education" id="nav-education">Pendidikan</a>
+                    <a href="#projects" id="nav-projects">Proyek</a>
+                    <a href="#contact" id="nav-contact">Kontak</a>
+                </nav>
+
+                <div class="language-dropdown" id="language-dropdown">
+                    <button
+                        class="language-trigger"
+                        id="language-trigger"
+                        type="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        <span class="language-trigger-flag" id="language-current-flag">ID</span>
+                        <span class="language-trigger-label" id="language-current-label">Bahasa Indonesia</span>
+                        <span class="language-trigger-caret">&#9662;</span>
+                    </button>
+
+                    <div class="language-menu" id="language-menu" role="menu" hidden>
+                        <button class="language-option active" type="button" data-lang="id" role="menuitem">
+                            <span class="language-option-flag">ID</span>
+                            <span>Bahasa Indonesia</span>
+                        </button>
+                        <button class="language-option" type="button" data-lang="en" role="menuitem">
+                            <span class="language-option-flag">EN</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero section" id="home">
+                <div class="hero-copy" data-reveal>
+                    <p class="eyebrow" id="hero-eyebrow">Portfolio Laravel</p>
+                    <h1 id="hero-name">Muhammad Fajri</h1>
+                    <p class="hero-role" id="hero-role"></p>
+                    <p class="hero-summary" id="hero-summary"></p>
+                    <div class="hero-highlights" id="hero-highlights"></div>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" id="github-button" target="_blank" rel="noreferrer">
+                            <span id="github-button-text">Lihat GitHub</span>
+                        </a>
+                        <a class="button button-secondary" id="linkedin-button" target="_blank" rel="noreferrer">
+                            <span id="linkedin-button-text">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div class="stats-grid" id="stats-grid"></div>
+                </div>
+
+                <div class="hero-visual" id="hero-visual" data-reveal>
+                    <div class="hero-orbit hero-orbit-a" aria-hidden="true"></div>
+                    <div class="hero-orbit hero-orbit-b" aria-hidden="true"></div>
+
+                    <aside class="profile-card" id="profile-card">
+                        <div class="profile-image-wrap">
+                            <img id="profile-image" class="profile-image" src="" alt="Foto profil Muhammad Fajri">
+                        </div>
+
+                        <div class="profile-card-body">
+                            <p class="profile-label" id="profile-label">Sorotan Peran</p>
+                            <h2 id="profile-title"></h2>
+                            <p id="profile-subtitle"></p>
+                            <div class="badge-list" id="focus-badges"></div>
+                        </div>
+                    </aside>
+
+                    <article class="floating-note" id="floating-note">
+                        <p class="floating-note-label" id="hero-note-label"></p>
+                        <strong id="hero-note-title"></strong>
+                        <span id="hero-note-text"></span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="about">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow" id="about-eyebrow">Tentang Saya</p>
+                    <h2 id="about-heading"></h2>
+                </div>
+
+                <div class="about-layout">
+                    <article class="glass-card" data-reveal>
+                        <p id="about-text"></p>
+                    </article>
+
+                    <article class="glass-card info-card" data-reveal>
+                        <h3 id="info-card-title"></h3>
+                        <div class="info-list" id="info-list"></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="skills">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow" id="skills-eyebrow">Skill</p>
+                    <h2 id="skills-heading"></h2>
+                </div>
+
+                <div class="skill-groups" id="skill-groups"></div>
+            </section>
+
+            <section class="section" id="experience">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow" id="experience-eyebrow">Pengalaman</p>
+                    <h2 id="experience-heading"></h2>
+                </div>
+
+                <div class="timeline" id="experience-list"></div>
+            </section>
+
+            <section class="section" id="education">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow" id="education-eyebrow">Pendidikan</p>
+                    <h2 id="education-heading"></h2>
+                </div>
+
+                <div class="education-grid" id="education-list"></div>
+            </section>
+
+            <section class="section" id="projects">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow" id="projects-eyebrow">Proyek</p>
+                    <h2 id="projects-heading"></h2>
+                    <p class="section-description" id="projects-description"></p>
+                </div>
+
+                <div class="project-toolbar" data-reveal>
+                    <p class="project-filter-label" id="project-filter-label"></p>
+                    <div class="project-filters" id="project-filters"></div>
+                </div>
+
+                <div class="project-grid" id="project-list"></div>
+            </section>
+
+            <section class="section" id="contact">
+                <div class="contact-card" data-reveal>
+                    <div>
+                        <p class="eyebrow" id="contact-eyebrow">Kontak</p>
+                        <h2 id="contact-heading"></h2>
+                        <p id="contact-summary"></p>
+                    </div>
+
+                    <div class="contact-actions" id="contact-actions"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p id="footer-text"></p>
+        </footer>
+
+        <script>
+            window.portfolioData = @json($portfolioData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        </script>
+        <script src="{{ asset('assets/script.js') }}"></script>
+    </body>
+</html>

@@ -13,3 +13,26 @@ Desktop.ini
 
 # Cache umum
 .cache/
+
+# Laravel environment and runtime files
+.env
+/.phpunit.result.cache
+/vendor/
+/node_modules/
+/bootstrap/cache/*.php
+/bootstrap/cache/*.json
+/storage/*.key
+/storage/app/private/
+/storage/debugbar/
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Keep framework directories while ignoring generated contents
+!/storage/framework/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/testing/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/logs/.gitignore

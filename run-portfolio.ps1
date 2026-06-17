@@ -1,7 +1,7 @@
-# Script kecil untuk menjalankan web portfolio di server lokal.
-# Port bisa diubah jika 4173 sedang dipakai aplikasi lain.
+# Script kecil untuk menjalankan web portfolio Laravel di server lokal.
+# Port bisa diubah jika 8000 sedang dipakai aplikasi lain.
 
-$port = 4173
+$port = 8000
 
-Write-Host "Menjalankan portfolio di http://127.0.0.1:$port"
-python -m http.server $port
+Write-Host "Menjalankan portfolio Laravel di http://127.0.0.1:$port"
+php artisan serve --host=127.0.0.1 --port=$port

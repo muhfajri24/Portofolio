@@ -1,54 +1,34 @@
-# Muhammad Fajri – Portfolio Website
+# Muhammad Fajri - Laravel Portfolio
 
-Website portfolio pribadi yang dirancang untuk menampilkan kemampuan saya dalam membangun antarmuka web yang **clean, responsive, dan user-friendly**.
+Portfolio pribadi Muhammad Fajri yang kini dibangun dengan Laravel untuk menjaga struktur aplikasi lebih rapi tanpa menghilangkan pengalaman frontend yang interaktif.
 
-🔗 **Live Demo:**  
-https://muhfajri24.github.io/Portofolio/
+## Yang Diupdate
 
-Project ini merepresentasikan bagaimana saya membangun website dari nol dengan struktur yang rapi, scalable, dan siap dikembangkan ke tahap yang lebih kompleks.
+- Migrasi dari web statis ke Laravel + Blade
+- JavaScript interaktif tetap dipertahankan untuk language switcher, reveal animation, hero motion, active navigation, dan project filter
+- Palet warna diperbarui menjadi lebih elegan dengan nuansa warm dark dan gold accent
+- Section project diperluas dengan project baru dari folder `project portfolio`
 
----
+## Sorotan Project Baru
 
-## 🚀 Highlight
+- Customer Churn Prediction
+- Customer Segmentation
+- Gojek Review Insight
+- Sales Forecasting
 
-- Responsive design (desktop & mobile)
-- Clean UI dengan fokus pada user experience
-- Structured & maintainable code
-- Dynamic rendering menggunakan Vanilla JavaScript
-- Automated deployment dengan GitHub Actions
+## Menjalankan Project
 
----
+```powershell
+cd Portfolio
+php artisan serve
+```
 
-## 🛠 Tech Stack
+Atau jalankan:
 
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla)  
+```powershell
+.\run-portfolio.ps1
+```
 
----
+Lalu buka:
 
-## 🎯 Tujuan Project
-
-Project ini dibuat sebagai langkah awal untuk:
-
-- Mengasah kemampuan **frontend development**
-- Memahami struktur project web yang baik
-- Membangun fondasi sebelum menggunakan framework modern seperti React
-
----
-
-## 📂 Fitur
-
-- Halaman profil personal
-- Showcase project & skill
-- Responsive layout di berbagai device
-- Dynamic content rendering
-
----
-
-## 💻 Development
-
-Clone repository dan jalankan secara lokal sesuai kebutuhan development.
-
-
-Feel free to explore the live demo and review my code.
+`http://127.0.0.1:8000`
