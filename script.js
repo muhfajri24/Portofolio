@@ -47,6 +47,7 @@ const portfolioData = {
       projectActions: {
         website: "Buka Demo",
         repository: "Buka Repository",
+        comingSoon: "Repository Segera Hadir",
       },
       projectFilters: [
         { value: "all", label: "Semua" },
@@ -103,6 +104,7 @@ const portfolioData = {
       projectActions: {
         website: "Open Demo",
         repository: "Open Repository",
+        comingSoon: "Repository Coming Soon",
       },
       projectFilters: [
         { value: "all", label: "All" },
@@ -746,6 +748,10 @@ function renderProjects() {
       action.rel = "noreferrer";
       actions.appendChild(action);
     });
+
+    if (item.links.length === 0) {
+      actions.appendChild(createElement("span", "project-link project-link-disabled", ui.projectActions.comingSoon));
+    }
 
     card.append(top, actions);
     root.appendChild(card);

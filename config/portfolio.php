@@ -45,6 +45,7 @@ return [
             'projectActions' => [
                 'website' => 'Buka Demo',
                 'repository' => 'Buka Repository',
+                'comingSoon' => 'Repository Segera Hadir',
             ],
             'projectFilters' => [
                 ['value' => 'all', 'label' => 'Semua'],
@@ -97,6 +98,7 @@ return [
             'projectActions' => [
                 'website' => 'Open Demo',
                 'repository' => 'Open Repository',
+                'comingSoon' => 'Repository Coming Soon',
             ],
             'projectFilters' => [
                 ['value' => 'all', 'label' => 'All'],

@@ -832,6 +832,13 @@ main,
   font-weight: 700;
 }
 
+.project-link-disabled {
+  border-style: dashed;
+  color: var(--muted);
+  background: rgba(255, 248, 240, 0.04);
+  cursor: default;
+}
+
 .contact-card {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
