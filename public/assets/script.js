@@ -31,7 +31,7 @@ function getCategoryLabel(category) {
   const map = {
     web: { id: "Web", en: "Web" },
     "machine-learning": { id: "Machine Learning", en: "Machine Learning" },
-    analytics: { id: "Analytics", en: "Analytics" },
+    analytics: { id: "Data Science", en: "Data Science" },
   };
 
   return map[category]?.[state.lang] ?? category;

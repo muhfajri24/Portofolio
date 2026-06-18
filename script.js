@@ -13,7 +13,7 @@ const portfolioData = {
         skills: "Skill",
         experience: "Pengalaman",
         education: "Pendidikan",
-        projects: "Proyek",
+        projects: "Project",
         contact: "Kontak",
       },
       heroEyebrow: "Data Scientist Portfolio",
@@ -25,7 +25,7 @@ const portfolioData = {
       experienceHeading: "Pengalaman profesional dan organisasi yang membentuk cara saya bekerja",
       educationEyebrow: "Pendidikan",
       educationHeading: "Fondasi akademik yang mendukung eksplorasi teknologi",
-      projectsEyebrow: "Proyek",
+      projectsEyebrow: "Project",
       projectsHeading: "Project yang menunjukkan workflow data, machine learning, dan dampak analitis",
       projectsDescription:
         "Bagian ini menampilkan project yang saya gunakan untuk mengasah supervised learning, unsupervised learning, NLP, time series forecasting, dan analisis data yang siap dipresentasikan.",
@@ -33,7 +33,7 @@ const portfolioData = {
       contactEyebrow: "Kontak",
       contactHeading: "Mari terhubung untuk kolaborasi, internship, atau peluang kerja",
       contactSummary:
-        "Saya terbuka untuk peluang data scientist, machine learning, analytics, dan backend yang membutuhkan eksekusi teknis sekaligus komunikasi yang rapi.",
+        "Saya terbuka untuk peluang data scientist, machine learning, data science, dan backend yang membutuhkan eksekusi teknis sekaligus komunikasi yang rapi.",
       infoTitle: "Info Singkat",
       noteLabel: "Fokus Saat Ini",
       noteTitle: "Data scientist focus",
@@ -53,7 +53,7 @@ const portfolioData = {
         { value: "all", label: "Semua" },
         { value: "web", label: "Web" },
         { value: "machine-learning", label: "Machine Learning" },
-        { value: "analytics", label: "Analytics" },
+        { value: "analytics", label: "Data Science" },
       ],
       stats: [
         { value: "6+", label: "Pengalaman organisasi & profesional" },
@@ -90,7 +90,7 @@ const portfolioData = {
       contactEyebrow: "Contact",
       contactHeading: "Let us connect for collaboration, internships, or career opportunities",
       contactSummary:
-        "I am open to data scientist, machine learning, analytics, and backend opportunities that need both technical execution and clear communication.",
+        "I am open to data scientist, machine learning, data science, and backend opportunities that need both technical execution and clear communication.",
       infoTitle: "Quick Info",
       noteLabel: "Current Focus",
       noteTitle: "Data scientist focus",
@@ -110,7 +110,7 @@ const portfolioData = {
         { value: "all", label: "All" },
         { value: "web", label: "Web" },
         { value: "machine-learning", label: "Machine Learning" },
-        { value: "analytics", label: "Analytics" },
+        { value: "analytics", label: "Data Science" },
       ],
       stats: [
         { value: "6+", label: "Professional and organizational roles" },
@@ -170,7 +170,7 @@ const portfolioData = {
       { title: "Telepon", value: "0823-3318-8437" },
       { title: "Alamat", value: "Bojongsoang, Bandung" },
       { title: "Kampus", value: "Universitas Telkom" },
-      { title: "Fokus", value: "Data scientist, machine learning, forecasting, NLP, dan analytics" },
+      { title: "Fokus", value: "Data scientist, machine learning, forecasting, NLP, dan data science" },
     ],
     en: [
       { title: "Location", value: "Bandung Regency, West Java" },
@@ -314,7 +314,7 @@ const portfolioData = {
         stack: "Laravel, Blade, CSS, JavaScript",
         category: "web",
         description: "Rebuild web pribadi dari versi statis ke Laravel agar lebih rapi secara struktur, tetap interaktif, dan lebih mudah dipakai untuk menampilkan arah karier Data Scientist.",
-        highlight: "Menjadi rumah presentasi untuk project machine learning, forecasting, NLP, dan analytics yang saya kerjakan.",
+        highlight: "Menjadi rumah presentasi untuk project machine learning, forecasting, NLP, dan data science yang saya kerjakan.",
         links: [{ type: "repository", href: "https://github.com/muhfajri24/Portofolio" }],
       },
       {
@@ -383,7 +383,7 @@ const portfolioData = {
         name: "Artificial Intelligence Project",
         stack: "Jupyter Notebook, Machine Learning",
         category: "machine-learning",
-        description: "Proyek klasifikasi potabilitas air menggunakan KNN dan seleksi fitur berbasis Genetic Algorithm.",
+        description: "Project klasifikasi potabilitas air menggunakan KNN dan seleksi fitur berbasis Genetic Algorithm.",
         highlight: "Menunjukkan fondasi eksplorasi AI sejak tahap awal pembelajaran.",
         links: [{ type: "repository", href: "https://github.com/muhfajri24/Artficial_Intellegence_Project" }],
       },
@@ -533,7 +533,7 @@ function getCategoryLabel(category) {
   const map = {
     web: { id: "Web", en: "Web" },
     "machine-learning": { id: "Machine Learning", en: "Machine Learning" },
-    analytics: { id: "Analytics", en: "Analytics" },
+    analytics: { id: "Data Science", en: "Data Science" },
   };
 
   return map[category]?.[state.lang] ?? category;
