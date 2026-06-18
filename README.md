@@ -1,13 +1,14 @@
-# Muhammad Fajri - Laravel Portfolio
+# Muhammad Fajri - Data Scientist Portfolio
 
-Portfolio pribadi Muhammad Fajri yang kini dibangun dengan Laravel untuk menjaga struktur aplikasi lebih rapi tanpa menghilangkan pengalaman frontend yang interaktif.
+Web portfolio Muhammad Fajri yang dibangun dengan Laravel untuk menampilkan arah Data Scientist melalui project machine learning, forecasting, NLP, analytics, dan fondasi backend yang tetap rapi.
 
 ## Yang Diupdate
 
 - Migrasi dari web statis ke Laravel + Blade
 - JavaScript interaktif tetap dipertahankan untuk language switcher, reveal animation, hero motion, active navigation, dan project filter
 - Palet warna diperbarui menjadi lebih elegan dengan nuansa warm dark dan gold accent
-- Section project diperluas dengan project baru dari folder `project portfolio`
+- Narasi utama kini lebih menonjolkan arah `Data Scientist`
+- Section project disusun ulang agar project data science utama tampil lebih menonjol
 
 ## Sorotan Project Baru
 

@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Muhammad Fajri | Portfolio</title>
+        <title>Muhammad Fajri | Data Scientist Portfolio</title>
         <meta
             name="description"
-            content="Portfolio Muhammad Fajri yang dibangun dengan Laravel, menampilkan pengalaman, perjalanan akademik, dan project web serta data yang interaktif."
+            content="Data Scientist portfolio of Muhammad Fajri, featuring machine learning, forecasting, NLP, analytics projects, and a structured backend foundation."
         >
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
