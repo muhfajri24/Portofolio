@@ -381,7 +381,9 @@ return [
                 'category' => 'analytics',
                 'description' => 'Project analytics untuk mengubah data penjualan restoran mentah menjadi KPI summary, analisis tren, output SQL, dan aset dashboard yang siap dipresentasikan.',
                 'highlight' => 'Total revenue mencapai 769,515.89 dengan top category Main Course dan kota performa tertinggi Lisbon.',
-                'links' => [],
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/Restaurant-Sales-Insight'],
+                ],
             ],
             [
                 'name' => 'Artificial Intelligence Project',
@@ -483,7 +485,9 @@ return [
                 'category' => 'analytics',
                 'description' => 'An analytics project that turns raw restaurant sales data into KPI summaries, trend analysis, SQL outputs, and dashboard-ready assets.',
                 'highlight' => 'Total revenue reaches 769,515.89, with Main Course as the top category and Lisbon as the strongest-performing city in the sample.',
-                'links' => [],
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/Restaurant-Sales-Insight'],
+                ],
             ],
             [
                 'name' => 'Artificial Intelligence Project',
