@@ -47,7 +47,7 @@ const portfolioData = {
       projectActions: {
         website: "Buka Demo",
         repository: "Buka Repository",
-        comingSoon: "Repository Segera Hadir",
+        comingSoon: "Buka Repository",
       },
       projectFilters: [
         { value: "all", label: "Semua" },
@@ -104,7 +104,7 @@ const portfolioData = {
       projectActions: {
         website: "Open Demo",
         repository: "Open Repository",
-        comingSoon: "Repository Coming Soon",
+        comingSoon: "Open Repository",
       },
       projectFilters: [
         { value: "all", label: "All" },
