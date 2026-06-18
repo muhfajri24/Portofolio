@@ -54,7 +54,7 @@ return [
             ],
             'stats' => [
                 ['value' => '6+', 'label' => 'Pengalaman organisasi & profesional'],
-                ['value' => '8', 'label' => 'Project publik & portfolio utama'],
+                ['value' => '10', 'label' => 'Project publik & portfolio utama'],
                 ['value' => '2023-', 'label' => 'Perjalanan akademik informatika'],
             ],
         ],
@@ -106,7 +106,7 @@ return [
             ],
             'stats' => [
                 ['value' => '6+', 'label' => 'Professional and organizational roles'],
-                ['value' => '8', 'label' => 'Public and flagship portfolio projects'],
+                ['value' => '10', 'label' => 'Public and flagship portfolio projects'],
                 ['value' => '2023-', 'label' => 'Academic journey in informatics'],
             ],
         ],
@@ -374,6 +374,14 @@ return [
                 ],
             ],
             [
+                'name' => 'Restaurant Sales Insight',
+                'stack' => 'Python, SQL, Pandas, Power BI',
+                'category' => 'analytics',
+                'description' => 'Project analytics untuk mengubah data penjualan restoran mentah menjadi KPI summary, analisis tren, output SQL, dan aset dashboard yang siap dipresentasikan.',
+                'highlight' => 'Total revenue mencapai 769,515.89 dengan top category Main Course dan kota performa tertinggi Lisbon.',
+                'links' => [],
+            ],
+            [
                 'name' => 'Artificial Intelligence Project',
                 'stack' => 'Jupyter Notebook, Machine Learning',
                 'category' => 'machine-learning',
@@ -466,6 +474,14 @@ return [
                 'links' => [
                     ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/Sales-Forecasting'],
                 ],
+            ],
+            [
+                'name' => 'Restaurant Sales Insight',
+                'stack' => 'Python, SQL, Pandas, Power BI',
+                'category' => 'analytics',
+                'description' => 'An analytics project that turns raw restaurant sales data into KPI summaries, trend analysis, SQL outputs, and dashboard-ready assets.',
+                'highlight' => 'Total revenue reaches 769,515.89, with Main Course as the top category and Lisbon as the strongest-performing city in the sample.',
+                'links' => [],
             ],
             [
                 'name' => 'Artificial Intelligence Project',
