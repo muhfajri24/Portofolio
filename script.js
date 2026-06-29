@@ -329,6 +329,16 @@ const portfolioData = {
         ],
       },
       {
+        name: "Proyek Machine Learning - Dicoding",
+        stack: "Python, K-Means, Decision Tree, Yellowbrick",
+        category: "machine-learning",
+        description:
+          "Project submission machine learning berbasis dataset transaksi finansial untuk melakukan EDA, preprocessing, clustering, interpretasi cluster, lalu klasifikasi label cluster dengan Decision Tree.",
+        highlight:
+          "Menggunakan sample kerja 30.000 baris, menghasilkan 2 cluster terbaik, dan model Decision Tree dengan akurasi 99.93%.",
+        links: [{ type: "repository", href: "https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding" }],
+      },
+      {
         name: "revou-mini-project",
         stack: "HTML, CSS",
         category: "web",
@@ -338,16 +348,6 @@ const portfolioData = {
           { type: "website", href: "https://muhfajri24.github.io/revou-mini-project/" },
           { type: "repository", href: "https://github.com/muhfajri24/revou-mini-project" },
         ],
-      },
-      {
-        name: "Proyek Machine Learning - Dicoding",
-        stack: "Python, K-Means, Decision Tree, Yellowbrick",
-        category: "machine-learning",
-        description:
-          "Project submission machine learning berbasis dataset transaksi finansial untuk melakukan EDA, preprocessing, clustering, interpretasi cluster, lalu klasifikasi label cluster dengan Decision Tree.",
-        highlight:
-          "Menggunakan sample kerja 30.000 baris, menghasilkan 2 cluster terbaik, dan model Decision Tree dengan akurasi 99.93%.",
-        links: [{ type: "repository", href: "https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding" }],
       },
       {
         name: "Customer Churn Prediction",
@@ -427,6 +427,16 @@ const portfolioData = {
         ],
       },
       {
+        name: "Machine Learning Project - Dicoding",
+        stack: "Python, K-Means, Decision Tree, Yellowbrick",
+        category: "machine-learning",
+        description:
+          "A machine learning submission project built on financial transaction data covering EDA, preprocessing, clustering, cluster interpretation, and cluster-label classification with Decision Tree.",
+        highlight:
+          "Uses a 30,000-row working sample, produces 2 best clusters, and reaches 99.93% accuracy with the Decision Tree model.",
+        links: [{ type: "repository", href: "https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding" }],
+      },
+      {
         name: "revou-mini-project",
         stack: "HTML, CSS",
         category: "web",
@@ -436,16 +446,6 @@ const portfolioData = {
           { type: "website", href: "https://muhfajri24.github.io/revou-mini-project/" },
           { type: "repository", href: "https://github.com/muhfajri24/revou-mini-project" },
         ],
-      },
-      {
-        name: "Machine Learning Project - Dicoding",
-        stack: "Python, K-Means, Decision Tree, Yellowbrick",
-        category: "machine-learning",
-        description:
-          "A machine learning submission project built on financial transaction data covering EDA, preprocessing, clustering, cluster interpretation, and cluster-label classification with Decision Tree.",
-        highlight:
-          "Uses a 30,000-row working sample, produces 2 best clusters, and reaches 99.93% accuracy with the Decision Tree model.",
-        links: [{ type: "repository", href: "https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding" }],
       },
       {
         name: "Customer Churn Prediction",
@@ -561,6 +561,9 @@ function getCategoryLabel(category) {
 
 function renderStaticText() {
   const ui = getUI();
+  const projectCount = portfolioData.projects[state.lang].length;
+  const projectCountLabel =
+    state.lang === "id" ? `${ui.projectFilterLabel} · ${projectCount} project` : `${ui.projectFilterLabel} · ${projectCount} projects`;
 
   document.documentElement.lang = ui.lang;
   $("#nav-about").textContent = ui.nav.about;
@@ -581,7 +584,7 @@ function renderStaticText() {
   $("#projects-eyebrow").textContent = ui.projectsEyebrow;
   $("#projects-heading").textContent = ui.projectsHeading;
   $("#projects-description").textContent = ui.projectsDescription;
-  $("#project-filter-label").textContent = ui.projectFilterLabel;
+  $("#project-filter-label").textContent = projectCountLabel;
   $("#contact-eyebrow").textContent = ui.contactEyebrow;
   $("#contact-heading").textContent = ui.contactHeading;
   $("#contact-summary").textContent = ui.contactSummary;
@@ -896,6 +899,7 @@ function bindActiveNavigation() {
   if (!sections.length || !links.length) {
     return;
   }
+  const header = $(".site-header");
 
   const setActiveLink = (sectionId) => {
     links.forEach((link) => {
@@ -904,13 +908,15 @@ function bindActiveNavigation() {
   };
 
   const syncActiveSection = () => {
-    const marker = window.innerHeight * 0.24;
+    const headerOffset = (header?.offsetHeight ?? 0) + 24;
+    const marker = headerOffset + Math.min(window.innerHeight * 0.2, 180);
     let activeSection = sections[0];
 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
+      const sectionContainsMarker = rect.top <= marker && rect.bottom > marker;
 
-      if (rect.top <= marker) {
+      if (sectionContainsMarker) {
         activeSection = section;
       }
     });
