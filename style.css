@@ -792,6 +792,13 @@ main,
   flex-wrap: wrap;
 }
 
+.project-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
 .project-category {
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
@@ -801,6 +808,22 @@ main,
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.project-collaboration {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 248, 240, 0.14);
+  color: var(--text);
+  background: rgba(255, 248, 240, 0.07);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.project-role {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.7;
 }
 
 .project-highlight {

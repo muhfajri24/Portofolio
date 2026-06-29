@@ -47,6 +47,8 @@ return [
                 'repository' => 'Buka Repository',
                 'comingSoon' => 'Buka Repository',
             ],
+            'projectRoleLabel' => 'Peran saya',
+            'projectCollaborationBadge' => 'Project Bersama',
             'projectFilters' => [
                 ['value' => 'all', 'label' => 'Semua'],
                 ['value' => 'web', 'label' => 'Web'],
@@ -55,7 +57,7 @@ return [
             ],
             'stats' => [
                 ['value' => '6+', 'label' => 'Pengalaman organisasi & profesional'],
-                ['value' => '11', 'label' => 'Project publik yang aktif ditampilkan'],
+                ['value' => '13', 'label' => 'Project publik yang aktif ditampilkan'],
                 ['value' => '2023-', 'label' => 'Perjalanan akademik informatika'],
             ],
         ],
@@ -100,6 +102,8 @@ return [
                 'repository' => 'Open Repository',
                 'comingSoon' => 'Open Repository',
             ],
+            'projectRoleLabel' => 'My role',
+            'projectCollaborationBadge' => 'Collaborative Project',
             'projectFilters' => [
                 ['value' => 'all', 'label' => 'All'],
                 ['value' => 'web', 'label' => 'Web'],
@@ -108,7 +112,7 @@ return [
             ],
             'stats' => [
                 ['value' => '6+', 'label' => 'Professional and organizational roles'],
-                ['value' => '11', 'label' => 'Public projects actively showcased'],
+                ['value' => '13', 'label' => 'Public projects actively showcased'],
                 ['value' => '2023-', 'label' => 'Academic journey in informatics'],
             ],
         ],
@@ -304,6 +308,30 @@ return [
     'projects' => [
         'id' => [
             [
+                'name' => 'food-ordering-web-app',
+                'stack' => 'Laravel, Flutter, React, PostgreSQL',
+                'category' => 'web',
+                'collaboration' => true,
+                'role' => 'Berkontribusi pada arsitektur full-stack yang menghubungkan Laravel REST API, klien Flutter, dan frontend React legacy dalam satu alur pemesanan makanan.',
+                'description' => 'Project bersama berupa aplikasi pemesanan makanan dengan backend Laravel, client Flutter, dan frontend React lama yang tetap tersimpan sebagai referensi pengembangan.',
+                'highlight' => 'Memiliki alur end-to-end dari autentikasi, katalog produk, order, payment, hingga dashboard admin dengan API terpusat.',
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/food-ordering-web-app'],
+                ],
+            ],
+            [
+                'name' => 'Ruang-Kita',
+                'stack' => 'React, TypeScript, Supabase, Tailwind',
+                'category' => 'web',
+                'collaboration' => true,
+                'role' => 'Berkontribusi pada pengembangan web reservasi fasilitas kampus dengan alur user dan admin, termasuk pengalaman pemesanan, pengelolaan reservasi, dan notifikasi.',
+                'description' => 'Project bersama untuk sistem reservasi fasilitas kampus agar mahasiswa dapat melihat ketersediaan ruang dan admin dapat mengelola permohonan pemesanan secara lebih terpusat.',
+                'highlight' => 'Mencakup role-based access, dashboard admin, manajemen reservasi, dan notifikasi real-time untuk status peminjaman fasilitas.',
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/Ruang-Kita'],
+                ],
+            ],
+            [
                 'name' => 'Portfolio Laravel',
                 'stack' => 'Laravel, Blade, CSS, JavaScript',
                 'category' => 'web',
@@ -417,6 +445,30 @@ return [
             ],
         ],
         'en' => [
+            [
+                'name' => 'food-ordering-web-app',
+                'stack' => 'Laravel, Flutter, React, PostgreSQL',
+                'category' => 'web',
+                'collaboration' => true,
+                'role' => 'Contributed to the full-stack architecture that connects a Laravel REST API, a Flutter client, and a legacy React frontend in one food-ordering flow.',
+                'description' => 'A collaborative food-ordering application with a Laravel backend, a Flutter client, and a legacy React frontend retained in the repository for development reference.',
+                'highlight' => 'Covers the end-to-end flow from authentication, product catalog, orders, and payments to an admin dashboard backed by a centralized API.',
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/food-ordering-web-app'],
+                ],
+            ],
+            [
+                'name' => 'Ruang-Kita',
+                'stack' => 'React, TypeScript, Supabase, Tailwind',
+                'category' => 'web',
+                'collaboration' => true,
+                'role' => 'Contributed to the campus facility reservation experience across user and admin flows, including bookings, reservation management, and notifications.',
+                'description' => 'A collaborative campus facility reservation platform that helps students check room availability while giving admins a centralized way to manage reservation requests.',
+                'highlight' => 'Includes role-based access, an admin dashboard, reservation management, and real-time notifications for facility booking status.',
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/Ruang-Kita'],
+                ],
+            ],
             [
                 'name' => 'Laravel Portfolio',
                 'stack' => 'Laravel, Blade, CSS, JavaScript',
