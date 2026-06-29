@@ -11,6 +11,7 @@ class PortfolioContentTest extends TestCase
         $response = $this->get('/');
 
         $response->assertOk();
+        $response->assertSee('Financial Transaction Clustering Submission');
         $response->assertSee('Customer Churn Prediction');
         $response->assertSee('Customer Segmentation');
         $response->assertSee('Gojek Review Insight');
