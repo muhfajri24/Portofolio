@@ -57,7 +57,7 @@ const portfolioData = {
       ],
       stats: [
         { value: "6+", label: "Pengalaman organisasi & profesional" },
-        { value: "10", label: "Project publik yang aktif ditampilkan" },
+        { value: "11", label: "Project publik yang aktif ditampilkan" },
         { value: "2023-", label: "Perjalanan akademik informatika" },
       ],
     },
@@ -114,7 +114,7 @@ const portfolioData = {
       ],
       stats: [
         { value: "6+", label: "Professional and organizational roles" },
-        { value: "10", label: "Public projects actively showcased" },
+        { value: "11", label: "Public projects actively showcased" },
         { value: "2023-", label: "Academic journey in informatics" },
       ],
     },
@@ -340,6 +340,16 @@ const portfolioData = {
         ],
       },
       {
+        name: "Proyek Machine Learning - Dicoding",
+        stack: "Python, K-Means, Decision Tree, Yellowbrick",
+        category: "machine-learning",
+        description:
+          "Project submission machine learning berbasis dataset transaksi finansial untuk melakukan EDA, preprocessing, clustering, interpretasi cluster, lalu klasifikasi label cluster dengan Decision Tree.",
+        highlight:
+          "Menggunakan sample kerja 30.000 baris, menghasilkan 2 cluster terbaik, dan model Decision Tree dengan akurasi 99.93%.",
+        links: [{ type: "repository", href: "https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding" }],
+      },
+      {
         name: "Customer Churn Prediction",
         stack: "Python, Scikit-learn, XGBoost, Power BI",
         category: "machine-learning",
@@ -426,6 +436,16 @@ const portfolioData = {
           { type: "website", href: "https://muhfajri24.github.io/revou-mini-project/" },
           { type: "repository", href: "https://github.com/muhfajri24/revou-mini-project" },
         ],
+      },
+      {
+        name: "Machine Learning Project - Dicoding",
+        stack: "Python, K-Means, Decision Tree, Yellowbrick",
+        category: "machine-learning",
+        description:
+          "A machine learning submission project built on financial transaction data covering EDA, preprocessing, clustering, cluster interpretation, and cluster-label classification with Decision Tree.",
+        highlight:
+          "Uses a 30,000-row working sample, produces 2 best clusters, and reaches 99.93% accuracy with the Decision Tree model.",
+        links: [{ type: "repository", href: "https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding" }],
       },
       {
         name: "Customer Churn Prediction",
@@ -873,25 +893,44 @@ function bindLanguageDropdown() {
 function bindActiveNavigation() {
   const sections = $$("main section[id]");
   const links = $$(".site-nav a");
+  if (!sections.length || !links.length) {
+    return;
+  }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  const setActiveLink = (sectionId) => {
+    links.forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${sectionId}`);
+    });
+  };
 
-      if (!visible) {
-        return;
+  const syncActiveSection = () => {
+    const marker = window.innerHeight * 0.24;
+    let activeSection = sections[0];
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= marker) {
+        activeSection = section;
       }
+    });
 
-      links.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
-      });
-    },
-    { threshold: 0.35 }
-  );
+    setActiveLink(activeSection.id);
+  };
 
-  sections.forEach((section) => observer.observe(section));
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      const sectionId = link.getAttribute("href")?.replace("#", "");
+
+      if (sectionId) {
+        setActiveLink(sectionId);
+      }
+    });
+  });
+
+  window.addEventListener("scroll", syncActiveSection, { passive: true });
+  window.addEventListener("resize", syncActiveSection);
+  syncActiveSection();
 }
 
 function renderPortfolio() {

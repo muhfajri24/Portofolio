@@ -341,7 +341,9 @@ return [
                 'category' => 'machine-learning',
                 'description' => 'Project submission machine learning berbasis dataset Kaggle untuk melakukan EDA, preprocessing, clustering transaksi finansial, interpretasi cluster, lalu klasifikasi label cluster menggunakan Decision Tree.',
                 'highlight' => 'Menggunakan dataset Kaggle financial fraud detection, dengan 2 cluster terbaik pada sample kerja dan akurasi Decision Tree 99.93%.',
-                'links' => [],
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding'],
+                ],
             ],
             [
                 'name' => 'Customer Churn Prediction',
@@ -453,7 +455,9 @@ return [
                 'category' => 'machine-learning',
                 'description' => 'A Kaggle-based machine learning submission project that covers EDA, preprocessing, financial transaction clustering, cluster interpretation, and cluster-label classification with Decision Tree.',
                 'highlight' => 'Uses a Kaggle financial fraud detection dataset, with 2 best clusters on the working sample and 99.93% Decision Tree accuracy.',
-                'links' => [],
+                'links' => [
+                    ['type' => 'repository', 'href' => 'https://github.com/muhfajri24/Proyek-Machine-Learning---Dicoding'],
+                ],
             ],
             [
                 'name' => 'Customer Churn Prediction',
