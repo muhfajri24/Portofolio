@@ -1022,4 +1022,75 @@ function initPortfolio() {
   renderPortfolio();
 }
 
+
+// Project explorer: curated from public repository documentation, November 2026.
+const folderDefinitions = [
+ {id:'machine-learning',name:'AI & Machine Learning',detail:{id:'Model, NLP, dan sistem cerdas',en:'Models, NLP, and intelligent systems'},color:'#b7a2fa'},
+ {id:'analytics',name:'Data Science & Analytics',detail:{id:'Forecasting, segmentasi, dan insight',en:'Forecasting, segmentation, and insights'},color:'#7bcab5'},
+ {id:'web',name:'Web & Applications',detail:{id:'Produk web dan aplikasi',en:'Web products and applications'},color:'#edc47e'},
+ {id:'backend',name:'Backend & APIs',detail:{id:'Layanan, integrasi, dan arsitektur',en:'Services, integrations, and architecture'},color:'#8bbcf0'}
+];
+const additions = [
+ {name:'Citezy',stack:'Frontend · Research workflow',category:'machine-learning',repo:'Citezy',id:'Antarmuka alur riset dengan pelacakan sumber dan tahapan verifikasi. Integrasi backend/AI masih dalam pengembangan.',en:'Research workflow interface with source tracking and verification stages. Backend/AI integration is under development.',status:{id:'Dalam pengembangan',en:'In development'}},
+ {name:'API Sentinel AI',stack:'Python · FastAPI · Streamlit',category:'backend',repo:'API-Sentinel-AI',id:'Prototipe pengujian API lokal dengan skenario sintetis, test runner deterministik, dan antarmuka Streamlit. Integrasi model live belum terverifikasi.',en:'Local API testing prototype with synthetic scenarios, a deterministic test runner, and Streamlit UI. Live model integration is not verified.',status:{id:'Prototipe',en:'Prototype'}},
+ {name:'FinPay — Smart Financial Wallet',stack:'Go · Gin · PostgreSQL · Redis · Docker',category:'backend',repo:'Vaulta-Smart-Financial-Wallet',id:'Backend e-wallet dengan autentikasi JWT, transfer atomik, cache Redis, notifikasi worker, dan dokumentasi OpenAPI.',en:'E-wallet backend with JWT authentication, atomic transfers, Redis caching, notification workers, and OpenAPI documentation.'}
+];
+for (const lang of ['id','en']) {
+ portfolioData.projects[lang] = portfolioData.projects[lang].filter(p=>!p.links.some(l=>l.href==='https://github.com/muhfajri24/Portofolio'));
+ for (const item of additions) portfolioData.projects[lang].unshift({name:item.name,stack:item.stack,category:item.category,description:item[lang],highlight:lang==='id'?'Dokumentasi dan kode tersedia di repositori.':'Documentation and source are available in the repository.',status:item.status?.[lang],links:[{type:'repository',href:'https://github.com/muhfajri24/'+item.repo}]});
+ const ui=portfolioData.ui[lang];
+ ui.projectsHeading=lang==='id'?'Buka folder. Jelajahi karya saya.':'Open a folder. Explore my work.';
+ ui.projectsDescription=lang==='id'?'Kumpulan project berdasarkan bidang. Buka folder untuk melihat ringkasan, teknologi, status, dan kode sumbernya.':'Projects organized by discipline. Open a folder to explore the work, technology, status, and source code.';
+ ui.stats[1]={value:String(portfolioData.projects[lang].length),label:lang==='id'?'Project dalam koleksi':'Projects in this collection'};
+ ui.footer='© '+new Date().getFullYear()+' Muhammad Fajri · Built with curiosity & care.';
+ ui.heroEyebrow='DATA SCIENCE / AI / SOFTWARE';
+ ui.aboutHeading=lang==='id'?'Data, sistem, dan rasa ingin tahu.':'Data, systems, and curiosity.';
+ ui.skillsHeading=lang==='id'?'Perangkat untuk membangun ide.':'Tools for building ideas.';
+ ui.experienceHeading=lang==='id'?'Belajar melalui pengalaman.':'Learning through experience.';
+ ui.educationHeading=lang==='id'?'Fondasi yang terus berkembang.':'A foundation that keeps growing.';
+ const food=portfolioData.projects[lang].find(p=>p.name==='food-ordering-web-app');
+ if(food){food.stack='Laravel · Flutter · PostgreSQL';food.description=lang==='id'?'Aplikasi pemesanan makanan dengan Laravel REST API, klien Flutter, dan frontend React legacy.':'Food ordering application with a Laravel REST API, Flutter client, and legacy React frontend.';}
+ const churn=portfolioData.projects[lang].find(p=>p.name==='Customer Churn Prediction');
+ if(churn) churn.highlight=lang==='id'?'Mengubah probabilitas churn menjadi segmentasi risiko dan prioritas retensi.':'Transforms churn probability into risk segments and retention priorities.';
+}
+state.projectSearch='';
+function renderProjectFilters(){
+ const root=$('#project-filters');root.replaceChildren();
+ const home=createElement('button','explorer-home',state.lang==='id'?'← Semua folder':'← All folders');home.type='button';home.hidden=state.projectFilter==='all';
+ home.addEventListener('click',()=>{state.projectFilter='all';state.projectSearch='';renderProjectFilters();renderProjects();});
+ const label=createElement('label','search-label',state.lang==='id'?'Cari project':'Search projects');
+ const input=createElement('input','project-search');input.type='search';input.placeholder=state.lang==='id'?'Nama, teknologi, atau topik…':'Name, technology, or topic…';input.value=state.projectSearch;input.setAttribute('aria-label',label.textContent);
+ input.addEventListener('input',()=>{state.projectSearch=input.value;renderProjects();});label.append(input);
+ root.append(home,label);
+ $('#project-filter-label').textContent=state.projectFilter==='all'?'~/projects': '~/projects/'+state.projectFilter;
+}
+function renderProjects(){
+ const root=$('#project-list');root.replaceChildren();
+ const all=portfolioData.projects[state.lang];const query=state.projectSearch.trim().toLowerCase();
+ const matches=p=>(p.name+' '+p.stack+' '+p.description).toLowerCase().includes(query);
+ root.classList.toggle('folder-grid',state.projectFilter==='all'&&!query);
+ if(state.projectFilter==='all'&&!query){
+  folderDefinitions.forEach((folder,i)=>{
+   const count=all.filter(p=>p.category===folder.id).length;
+   const b=createElement('button','folder-card');b.type='button';b.style.setProperty('--folder-color',folder.color);
+   b.setAttribute('aria-label',(state.lang==='id'?'Buka folder ':'Open folder ')+folder.name);
+   const icon=createElement('span','folder-icon');icon.setAttribute('aria-hidden','true');
+   b.append(createElement('span','folder-index','0'+(i+1)),icon,createElement('h3','',folder.name),createElement('p','',folder.detail[state.lang]),createElement('span','folder-count',count+' projects ↗'));
+   b.addEventListener('click',()=>{state.projectFilter=folder.id;renderProjectFilters();renderProjects();$('#project-filters button').focus();});root.append(b);
+  });return;
+ }
+ const selected=all.filter(p=>(state.projectFilter==='all'||p.category===state.projectFilter)&&matches(p));
+ const status=createElement('p','explorer-result',selected.length+(state.lang==='id'?' project ditemukan':' projects found'));status.setAttribute('role','status');root.append(status);
+ for(const item of selected){
+  const card=createElement('article','project-card');const top=createElement('div','project-top');
+  top.append(createElement('span','project-category',folderDefinitions.find(f=>f.id===item.category)?.name||item.category),createElement('p','project-meta',item.stack),createElement('h3','',item.name),createElement('p','',item.description));
+  if(item.status)top.append(createElement('p','project-status',item.status));
+  if(item.role)top.append(createElement('p','project-role',getUI().projectRoleLabel+': '+item.role));
+  const actions=createElement('div','project-actions');
+  for(const l of item.links){const a=createElement('a','project-link',getUI().projectActions[l.type]+' ↗');a.href=l.href;a.target='_blank';a.rel='noopener noreferrer';actions.append(a);}
+  card.append(top,actions);root.append(card);
+ }
+}
+
 initPortfolio();
+
